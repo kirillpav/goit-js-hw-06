@@ -17,7 +17,7 @@ let imgGallery = document.getElementById("gallery");
 
 images.forEach((item) => {
   let li = document.createElement("li");
-  li.innerText = item.url;
-  li.innerText = item.alt;
+  li.innerHTML = "<img src='" + item.url + "'><br>";
+  li.innerHTML += item.alt;
   imgGallery.appendChild(li);
 });
